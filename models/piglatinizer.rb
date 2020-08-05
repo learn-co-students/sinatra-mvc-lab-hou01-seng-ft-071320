@@ -3,8 +3,7 @@ class PigLatinizer
     $vowels = ["A", "a", "E", "e", "I", "i", "O", "o", "U", "u"]
 
     def piglatinize(user_input)
-        array_to_pig = user_input.split(' ')
-        pigged_phrase = array_to_pig.map {|w| piggy_this(w)}.join(" ")
+        user_input.split(' ').map {|w| piggy_this(w)}.join(" ")
     end
 
     def piggy_this(word)
