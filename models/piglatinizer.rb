@@ -2,7 +2,7 @@ require 'pry'
 class PigLatinizer
 
 
-    def self.piglatinize_word(word)
+    def piglatinize_word(word)
         if ["a", "e", "i", "o", "u"].include?(word[0].downcase)
             pig_array = word + 'way'
         else
@@ -12,6 +12,6 @@ class PigLatinizer
     end
 
     def piglatinize(words)
-        words.split(/ /).map{|word|PigLatinizer.piglatinize_word(word)}.join(" ")
+        words.split(/ /).map{|word| piglatinize_word(word)}.join(" ")
     end
 end
